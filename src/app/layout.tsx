@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import { Noto_Sans_TC } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Noto_Sans_TC } from 'next/font/google';
+import CssBaseline from '@mui/material/CssBaseline';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import './globals.css';
 
 const notoSansTc = Noto_Sans_TC({
   subsets: ['latin'],
@@ -20,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="zh-TW-Hant">
       <body className={`${notoSansTc.variable}`}>
-        {children}
+        <AppRouterCacheProvider>
+          <CssBaseline />
+          {children}
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

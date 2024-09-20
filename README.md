@@ -1,4 +1,5 @@
 #### Yuki's Pokédex
+
 <div align="center">
   <img src="" alt="yuki-pokedex-logo"/>
 </div>
@@ -8,17 +9,20 @@
 </div>
 
 #### ✨ Roadmap
+
 - 🚧 Homepage
 - 🚧 Pokemon Page
 
 ...still on planning
 
 #### Project Architecture
+
 <div align="center">
   <img src="" alt="yuki-pokedex-architecture"/>
 </div>
 
 #### Tech Stack
+
 - Next.js v14 (TypeScript, App Router)
 - React.js (Hooks)
 - Tanstack Query (aka React Query)
