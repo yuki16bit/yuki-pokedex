@@ -1,13 +1,8 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_TC } from 'next/font/google';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import './globals.css';
-
-const notoSansTc = Noto_Sans_TC({
-  subsets: ['latin'],
-  variable: '--font-noto-sans-tc',
-});
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '@/styles/theme';
 
 export const metadata: Metadata = {
   title: "Yuki's Pokédex",
@@ -21,10 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-TW-Hant">
-      <body className={`${notoSansTc.variable}`}>
+      <body>
         <AppRouterCacheProvider>
-          <CssBaseline />
-          {children}
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {children}
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
